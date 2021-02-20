@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.LoopsII;
+package LoopsII;
 
 import java.util.Scanner;
 

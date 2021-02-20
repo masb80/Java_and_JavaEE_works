@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.LoopsI;
+package LoopsI;
 
 import java.io.*;
 import java.math.*;

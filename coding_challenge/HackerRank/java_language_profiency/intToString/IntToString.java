@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.intToString;
+package intToString;
 
 import java.util.*;
 import java.security.*;

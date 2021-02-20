@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.OutputFormating;
+package OutputFormating;
 
 import java.util.Scanner;
 

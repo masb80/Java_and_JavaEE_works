@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.welComeToJava;
+package welComeToJava;
 
 public class WelComeToJava{
     public static void main(String[] args) {

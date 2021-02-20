@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.Javaifelse;
+package Javaifelse;
 
 import java.util.*;
 

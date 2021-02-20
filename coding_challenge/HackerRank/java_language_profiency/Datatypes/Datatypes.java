@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.Datatypes;
+package Datatypes;
 
 import java.util.*;
 import java.io.*;
