@@ -1,3 +1,5 @@
+package CompareTheTriple;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -39,16 +41,16 @@ public class CompareTheTriple {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
-                .collect(toList());
+      //  List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
+              //  .collect(toList());
 
-        List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
-                .collect(toList());
-        // List<Integer> a = new ArrayList<>(Arrays.asList(1,23,33));
-        // List<Integer> b = new ArrayList<>(Arrays.asList(41,2,3));
+       // List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
+                //.collect(toList());
+         List<Integer> a = new ArrayList<>(Arrays.asList(1,23,33));
+         List<Integer> b = new ArrayList<>(Arrays.asList(41,2,3));
         List<Integer> result = compareTriplets(a, b);
         // result.forEach(i -> System.out.print(i)+" ");
-        bufferedWriter.write(result.stream().map(Object::toString).collect(joining(" ")) + "\n");
+       // bufferedWriter.write(result.stream().map(Object::toString).collect(joining(" ")) + "\n");
 
         bufferedReader.close();
         bufferedWriter.close();
