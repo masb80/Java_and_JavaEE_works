@@ -8,7 +8,6 @@ import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class PlusMinus {
-
     // Complete the plusMinus function below.
     static void plusMinus(int[] arr) {
         int poscount = 0;
@@ -57,8 +56,8 @@ public class PlusMinus {
         console.log( (poscount / length).toFixed(6) );
         */
 
-    }
 
+    
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
