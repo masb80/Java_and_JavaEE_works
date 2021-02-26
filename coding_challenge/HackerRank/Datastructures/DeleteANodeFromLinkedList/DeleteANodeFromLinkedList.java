@@ -1,4 +1,4 @@
-package InsertANodeInaSpecificPositionInLinkedList;
+package DeleteANodeFromLinkedList;
 
 import java.io.*;
 import java.math.*;
@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class InsertANodeInaSpecificPositionInLinkedList {
+public class DeleteANodeFromLinkedList {
 
     static class SinglyLinkedListNode {
         public int data;
@@ -42,8 +42,7 @@ public class InsertANodeInaSpecificPositionInLinkedList {
         }
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
-            throws IOException {
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
 
@@ -55,57 +54,47 @@ public class InsertANodeInaSpecificPositionInLinkedList {
         }
     }
 
-    // Complete the insertNodeAtPosition function below.
+    // Complete the deleteNode function below.
 
     /*
      * For your reference:
      *
-     * SinglyLinkedListNode { int data; SinglyLinkedListNode next; }
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
-        // create new node.
-        // SinglyLinkedListNode node = new SinglyLinkedListNode();
-        // node.data = data;
-
-        SinglyLinkedListNode new_node = new SinglyLinkedListNode(data);
-        new_node.next = null;
-
-        if (head == null) {
-            // if head is null and position is zero then exit.
-            if (position != 0) {
+    static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+           if (head == null) {
                 return head;
-            } else { // node set to the head.
-                head = new_node;
             }
-        }
-        // adding new node at the 0 position
-        if (head != null && position == 0) {
-            new_node.next = head;
-            head = new_node;
-            return head;
-        }
-
-        SinglyLinkedListNode current = head;
-        SinglyLinkedListNode previous = null;
-
-        int i = 0;
-
-        while (i < position) {
-            previous = current;
-            current = current.next;
-
-            if (current == null) {
-                break;
+           if (head != null && position == 0) {
+                head = head.next; // we can not write head = null because then whole node will be deleted
+                return head;
             }
-
-            i++;
-        }
-
-        new_node.next = current;
-        previous.next = new_node;
-        return head;
-
+            
+           // if (head != null && position != 0) {
+                SinglyLinkedListNode current = head;
+                SinglyLinkedListNode previous = null;
+                //int i = 0;
+                while(position > 0){
+                     previous = current;
+                    current = current.next;
+                    //  if (current == null) {
+                    //     break;
+                    // }
+                  //  i++;
+                    position--;
+                }
+               if(current != null){
+                 previous.next = current.next;  
+               }
+                    
+                return head;
+           // }
+            
+       
     }
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -125,15 +114,12 @@ public class InsertANodeInaSpecificPositionInLinkedList {
             llist.insertNode(llistItem);
         }
 
-        int data = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
         int position = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
+        SinglyLinkedListNode llist1 = deleteNode(llist.head, position);
 
-        printSinglyLinkedList(llist_head, " ", bufferedWriter);
+        printSinglyLinkedList(llist1, " ", bufferedWriter);
         bufferedWriter.newLine();
 
         bufferedWriter.close();
@@ -141,3 +127,4 @@ public class InsertANodeInaSpecificPositionInLinkedList {
         scanner.close();
     }
 }
+

@@ -1,4 +1,4 @@
-package InsertANodeAtTheTailOfALinkedList;
+package InsertANodeAtHeadOfTheLinkedList;
 
 import java.io.*;
 import java.math.*;
@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class InsertANodeAtTheTailOfALinkedList {
+public class InsertANodeAtHeadOfTheLinkedList {
 
     static class SinglyLinkedListNode {
         public int data;
@@ -22,15 +22,17 @@ public class InsertANodeAtTheTailOfALinkedList {
 
     static class SinglyLinkedList {
         public SinglyLinkedListNode head;
+        public SinglyLinkedListNode tail;
 
         public SinglyLinkedList() {
             this.head = null;
+            this.tail = null;
         }
 
+      
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
-            throws IOException {
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
 
@@ -42,39 +44,31 @@ public class InsertANodeAtTheTailOfALinkedList {
         }
     }
 
-    // Complete the insertNodeAtTail function below.
+    // Complete the insertNodeAtHead function below.
 
     /*
      * For your reference:
      *
-     * SinglyLinkedListNode { int data; SinglyLinkedListNode next; }
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
-        /* 1. Check if the given Node is null */
-        if (head == null) {
-            head = new SinglyLinkedListNode(data);
-            return head;
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+          /* 1. Check if the given Node is null */
+        if (llist == null) {
+            llist = new SinglyLinkedListNode(data);
+            return llist;
         }
-
-        /*
-         * 2. Allocate the Node & 3. Put in the data
-         */
         SinglyLinkedListNode new_node = new SinglyLinkedListNode(data);
+        // making new node next element as llist
+        new_node.next = llist;
+        
+        llist = new_node;
+        return llist;
+        
 
-        /*
-         * 4. This new node is going to be the last node, so make next of it as null
-         */
-        new_node.next = null;
-
-        /* 5. Else traverse till the last node */
-        SinglyLinkedListNode givenheadnodes = head;
-        while (givenheadnodes.next != null)
-            givenheadnodes = givenheadnodes.next;
-
-        /* 6. Change the next of last node */
-        givenheadnodes.next = new_node;
-        return head;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -90,11 +84,13 @@ public class InsertANodeAtTheTailOfALinkedList {
         for (int i = 0; i < llistCount; i++) {
             int llistItem = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        	
+          SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
 
-            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, llistItem);
-
-            llist.head = llist_head;
+          llist.head = llist_head;
         }
+
+
 
         printSinglyLinkedList(llist.head, "\n", bufferedWriter);
         bufferedWriter.newLine();
@@ -104,3 +100,4 @@ public class InsertANodeAtTheTailOfALinkedList {
         scanner.close();
     }
 }
+
