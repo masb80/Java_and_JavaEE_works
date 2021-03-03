@@ -1,0 +1,42 @@
+1) Calculate the 40th number of the fibonacci sequence 
+2) Count the number of different ways to move through a 6 x 9 grid
+3) Given a set of coins, how can we make 27 cents in the least number of coins
+4) Given a set of substrings, what are the possible ways to construct the string 'potentpot'
+
+Mainbly 2 parts of the Dynamic programming:
+1) Momoization
+2) Tabulation
+
+
+Traveler in a 2D grid:
+In how many ways cab you travel to the goal on a grid with dimensions m x n?
+
+In a 2 x 3 grid there are 3 unique ways to move 
+1) right, right, down
+2) right, down, right
+3) down, right, right
+
+
+Tips:
+Make it works:
+
+1) visualize the problem as a tree 
+2) implement the tree using resursion
+3) test it 
+
+Make it efficient:
+ 1) add a memo object
+ 2) add a base case to return memo values
+ 3) store return values into the memo
+
+ Can sum problem:
+
+canSum(targetSum, numbers)
+canSum(7,[3,4,2,7])
+
+
+Can construct problem:
+canConstruct(target, wordBank)
+canConstruct(abcdef, [ab, abc, cd, def, abcd])
+
+

@@ -1,4 +1,4 @@
-package LeftRotation;
+
 
 import java.io.*;
 import java.math.*;

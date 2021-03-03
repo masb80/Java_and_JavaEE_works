@@ -1,4 +1,4 @@
-package coding_challenge.LeetCode.TwoSum;
+package TwoSum;
 
 import java.util.Arrays;
 

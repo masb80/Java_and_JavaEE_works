@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.Algorithm.simpleArraySum;
+package simpleArraySum;
 
 import java.io.*;
 import java.math.*;
