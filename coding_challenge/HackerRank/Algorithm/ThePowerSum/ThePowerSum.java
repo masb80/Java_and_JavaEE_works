@@ -23,7 +23,7 @@ public class ThePowerSum {
     // Driver code
     public static void main(String args[])
     {
-        System.out.println(powerSum(5, 2));
+        System.out.println(powerSum(2, 2));
     }
     
 }
