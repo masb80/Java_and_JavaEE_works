@@ -44,7 +44,8 @@ public class MinNoOfSquaresRecursiveMethod {
         // }
 
         // }
-        // better algorithm to understand
+        //n= 6
+        // better algorithm to understand {1, 4}
         for (int x = 1; x * x <= n; x++) {
             System.out.println("inside loop before n = " + n + "  , res=  " + res + "  ,  x = " + x);
 
