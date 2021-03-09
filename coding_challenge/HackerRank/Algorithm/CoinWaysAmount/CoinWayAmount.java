@@ -1,3 +1,5 @@
+package CoinWaysAmount;
+
 
 
 import java.util.ArrayList;

@@ -1,3 +1,4 @@
+package CompareTheTriple;
 
 
 import java.io.BufferedReader;

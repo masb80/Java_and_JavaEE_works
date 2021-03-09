@@ -1,4 +1,4 @@
-
+package ThePowerSum;
 
 public class ThePowerSum {
    // static int powerSum(int X, int N)
@@ -9,8 +9,8 @@ public class ThePowerSum {
         System.out.println("X =  "+X+ "   upto   "+ upto+"   N   "+N);
         int[] arr = new int[X+1];
         arr[0] = 1;
-        for(int index = 1; index <= upto; ++index){
-            int pow = (int)Math.pow(index, N);
+        for(int i = 1; i <= upto; ++i){
+            int pow = (int)Math.pow(i, N);
             for(int j = X; j >= pow; j--){                
                 arr[j] += arr[j-pow];
                 System.out.print(arr[j]+"  ");
@@ -23,7 +23,7 @@ public class ThePowerSum {
     // Driver code
     public static void main(String args[])
     {
-        System.out.println(powerSum(2, 2));
+        System.out.println(powerSum(7, 2));
     }
     
 }
