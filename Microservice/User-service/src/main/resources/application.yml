@@ -1,0 +1,18 @@
+# SERVER PROPERTIES
+server:
+  port: 9002
+
+#SPRING APPLICATION NAME
+spring:
+  application:
+    name: USER-SERVICE
+
+#SERVICE REGISTRY PROPERTIES
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true # this can go ahead and registry the service in below
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost # in real cloud or in production, we need to change this hostname
