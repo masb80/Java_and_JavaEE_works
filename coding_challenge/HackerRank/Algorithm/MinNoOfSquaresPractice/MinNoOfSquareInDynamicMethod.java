@@ -49,7 +49,7 @@ public class MinNoOfSquareInDynamicMethod {
 
     // Driver Code
     public static void main(String args[]) {
-        System.out.println(getMinSquares(6));
+        System.out.println(getMinSquares(7));
     }
 
 }
