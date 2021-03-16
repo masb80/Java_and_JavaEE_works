@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.Datastructures.ArraysDS;
+package ArraysDS;
 
 import java.io.*;
 import java.math.*;

@@ -1,4 +1,4 @@
-package coding_challenge.HackerRank.Datastructures.Array2DHourglass;
+package Array2DHourglass;
 import java.io.*;
 import java.math.*;
 import java.security.*;
