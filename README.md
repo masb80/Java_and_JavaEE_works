@@ -7,5 +7,4 @@
 |   3   |              OCA and OCP exam               |         [OCA Exam](https://github.com/masb80/Java_and_JavaEE_works/tree/master/OCAExam) [OCP Exam](https://github.com/masb80/Java_and_JavaEE_works/tree/master/OCPExam)
 |   4   |              An on line learning resources project using Spring Boot, Spring Securities, and Hibernate. Added an admin panel for some specific users.                |         [Projects](https://github.com/masb80/Java_and_JavaEE_works)          |  
 |   5   |              Micro-services Project |         [Projects](https://github.com/masb80/Java_and_JavaEE_works/tree/master/Microservice) 
-|   6   |              Multi-threading Project
-|         [Projects](https://github.com/masb80/Java_and_JavaEE_works/tree/master/MultithreadingSpringBootProject) 
+|   6   |              Multi-threading Project |         [Projects](https://github.com/masb80/Java_and_JavaEE_works/tree/master/MultithreadingSpringBootProject) 
